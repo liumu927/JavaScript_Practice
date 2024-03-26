@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="./snake.css" />
+  </head>
+  <body>
+    <!-- 整体容器 -->
+    <div class="container">
+      <!-- 计分板 -->
+      <div class="scoreboard-warp">
+        <!-- 得分 -->
+        <div class="score">
+          <img src="./img/scope.png" />
+          <span class="s-score text">0</span>
+        </div>
+        <!-- 游戏时长 -->
+        <div class="duration">
+          <img src="./img/time.png" />
+          <!-- 分钟 -->
+          <span class="min">00</span>
+          <span class="Interval">:</span>
+          <!-- 秒钟 -->
+          <span class="sec">00</span>
+        </div>
+      </div>
+
+      <!-- 游戏区域 -->
+      <div class="snack-timi">
+        <!-- 贪吃蛇 -->
+        <div class="s-head"></div>
+        <!-- 蛇身 -->
+        <div class="s-body"></div>
+      </div>
+    </div>
+
+    <script src="./snake.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 800px;
+  height: 640px;
+  background-color: black;
+  border: 4px dashed yellowgreen;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 游戏区域自适应高度 */
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* 计分板 */
+.container .scoreboard-warp {
+  height: 40px;
+  border-bottom: 2px solid yellowgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+/* 计分板-左侧分数, 计分板-右侧时间 */
+.container .scoreboard-warp .score,
+.scoreboard-warp .duration {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* 分数图标 */
+.container .scoreboard-warp .score img {
+  max-width: 60%;
+  max-height: 60%;
+  margin-right: 5px;
+}
+
+/* 时间图标 */
+.container .scoreboard-warp .duration img {
+  max-width: 75%;
+  max-height: 75%;
+  margin-right: 5px;
+}
+
+/* 时间间隔分号 */
+.container .scoreboard-warp .duration .Interval {
+  margin: 0 3px;
+}
+
+/* 数字 */
+.container .scoreboard-warp span {
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+/* 游戏区域 */
+.container .snack-timi {
+  /* 高度自适应 */
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.container .snack-timi .s-head {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+}
+
+/* 分别对蛇头圆角进行设置 */
+.s-head.left {
+  border-radius: 50% 0 0 50%;
+}
+.s-head.top {
+  border-radius: 50% 50% 0 0;
+}
+.s-head.right {
+  border-radius: 0 50% 50% 0;
+}
+.s-head.bottom {
+  border-radius: 0 0 50% 50%;
+}
+
+.container .snack-timi .s-body {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+/* 蛇蛋 */
+.container .snack-timi .random-egg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: aqua;
+}
